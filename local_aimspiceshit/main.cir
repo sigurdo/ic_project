@@ -1,0 +1,57 @@
+[aimspice]
+[description]
+1161
+* Pixel subcircuit
+
+.include model_files/p18_cmos_models_tt.inc
+.include model_files/PhotoDiode.cir
+
+.param minW 1.08u
+.param maxL 1.08u
+
+.param M1W minW
+.param M1L maxL
+.param M2W minW
+.param M2L maxL
+.param M3W 3u
+.param M3L 0.67u
+.param M4W minW
+.param M4L maxL
+
+.param CS_value 2.5p
+
+.subckt pixel VDD VSS EXPOSE ERASE NRE OUT N2
+xPhotoDiode VDD 1 PhotoDiode
+* How to make NMOS: MX drain gate source bulk NMOS W= L=
+M1 1 EXPOSE N2 VSS NMOS W=M1W L=M1L
+M2 N2 ERASE VSS VSS NMOS W=M2W L=M2L
+
+* How to make capacitor: CX node1 node2 value
+CS N2 VSS CS_value
+
+* How to make PMOS: MX source gate drain bulk PMOS W= L=
+M3 3 N2 VSS VDD PMOS W=M3W L=M3L
+M4 OUT NRE 3 VDD PMOS W=M4W L=M3L
+.ends
+
+xPixelTest 1 0 2 3 4 5 6 pixel
+
+VDD 1 0 dc 1.8v
+* How to make pulse: Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)
+* V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
+vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 3m 12m)
+vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 12m)
+vNRE 4 0 dc 0v
+
+* How to make transient analysis: .TRAN TSTEP TSTOP
+.plot TRAN V(6)
+
+[tran]
+100n
+12m
+X
+X
+0
+[ana]
+4 0
+[end]
