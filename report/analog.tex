@@ -2,7 +2,27 @@
 
 In this circuit we will design the analog part of the camera, also called the pixel circuit.
 
-\subsection{Choosing values for switch transistors}
+\subsection{Choosing dimensions for switch transistors}
+The transistors M1, M2 and M4 all function as switches, where a digital gate input decides whether the transistor should act as a short-circuit between drain and source, or as an open circuit. Since these transistors simply should have two possible states, it is key that the leakage current is minimized. This is particularly important for M1 and M2 to ensure that the voltage over $C_s$ is as constant as possible during readout. In \emph{Analog Circuit Design} by Tony Chan Carusone, one can read in section 1.4.1 that the subthreshold leakage current is given by
+
+\begin{equation}
+    \label{eq:leakage}
+    I_{off} = (n-1) \mu_n C_{ox} \left( \frac{W}{L} \right) \left( \frac{kT}{q} \right)^2 \exp{(-qV_t / nkT)}.
+\end{equation}
+
+In order to minimize this leakage current, $\frac{W}{L}$ need to be as small as possible, meaning the smallest possible width $W$ and the largest possible length $L$ is desired. The transistor technology used limits the width to 
+
+\begin{equation}
+    \label{limitsW}
+    1.08 \mu\textrm{m} \leq W \leq 5.04 \mu\textrm{m}
+\end{equation}
+
+and limits the length Tony
+
+\begin{equation}
+    \label{limitsL}
+    0.36 \mu\textrm{m} \leq L \leq 1.08 \mu\textrm{m}.
+\end{equation}
 
 \subsection{Choosing value for CS}
 
