@@ -7,7 +7,7 @@
                  *                                           *
                  *********************************************
 
-	Date: Tue Oct 20 16:51:14 2020
+	Date: Tue Oct 27 14:40:14 2020
 	Circuit File: C:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\local_aimspiceshit\main.cir
 	Analysis: Transient
 
@@ -114,46 +114,66 @@
     99:  *end of: model_files/PhotoDiode.cir
    100:  
    101:  .param minW 1.08u
-   102:  .param maxL 1.08u
-   103:  
-   104:  .param M1W minW
-   105:  .param M1L maxL
-   106:  .param M2W minW
-   107:  .param M2L maxL
-   108:  .param M3W 3u
-   109:  .param M3L 0.67u
-   110:  .param M4W minW
-   111:  .param M4L maxL
-   112:  
-   113:  .param CS_value 2.5p
+   102:  .param maxW 5.04u
+   103:  .param maxL 1.08u
+   104:  .param minL 0.36u
+   105:  
+   106:  .param M1W minW
+   107:  .param M1L maxL
+   108:  .param M2W minW
+   109:  .param M2L maxL
+   110:  .param M3W maxW
+   111:  .param M3L minL
+   112:  .param M4W minW
+   113:  .param M4L maxL
    114:  
-   115:  .subckt pixel VDD VSS EXPOSE ERASE NRE OUT N2
-   116:  xPhotoDiode VDD 1 PhotoDiode
-   117:  * How to make NMOS: MX drain gate source bulk NMOS W= L=
-   118:  M1 1 EXPOSE N2 VSS NMOS W=M1W L=M1L
-   119:  M2 N2 ERASE VSS VSS NMOS W=M2W L=M2L
+   115:  .param MCW minW
+   116:  .param MCL maxL
+   117:  .param CC_value 3p
+   118:  
+   119:  .param CS_value 2p
    120:  
-   121:  * How to make capacitor: CX node1 node2 value
-   122:  CS N2 VSS CS_value
-   123:  
-   124:  * How to make PMOS: MX source gate drain bulk PMOS W= L=
-   125:  M3 3 N2 VSS VDD PMOS W=M3W L=M3L
-   126:  M4 OUT NRE 3 VDD PMOS W=M4W L=M3L
-   127:  .ends
-   128:  
-   129:  xPixelTest 1 0 2 3 4 5 6 pixel
-   130:  
-   131:  VDD 1 0 dc 1.8v
-   132:  * How to make pulse: Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)
-   133:  * V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
-   134:  vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 3m 12m)
-   135:  vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 12m)
-   136:  vNRE 4 0 dc 0v
-   137:  
-   138:  * How to make transient analysis: .TRAN TSTEP TSTOP
-   139:  .plot TRAN V(6)
-   140:  
-   141:  .tran 100n 12m
+   121:  .subckt pixel VDD VSS EXPOSE ERASE NRE OUT N2
+   122:  xPhotoDiode VDD 1 PhotoDiode
+   123:  * How to make NMOS: MX drain gate source bulk NMOS W= L=
+   124:  M1 1 EXPOSE N2 VSS NMOS W=M1W L=M1L
+   125:  M2 N2 ERASE VSS VSS NMOS W=M2W L=M2L
+   126:  
+   127:  * How to make capacitor: CX node1 node2 value
+   128:  CS N2 VSS CS_value
+   129:  
+   130:  * How to make PMOS: MX source gate drain bulk PMOS W= L=
+   131:  M3 3 N2 VSS VDD PMOS W=M3W L=M3L
+   132:  M4 OUT NRE 3 VDD PMOS W=M4W L=M3L
+   133:  .ends
+   134:  
+   135:  .subckt load VDD VSS OUT
+   136:  MC VDD OUT OUT VDD PMOS W=MCW L=MCL
+   137:  CC OUT VSS CC_value
+   138:  .ends
+   139:  
+   140:  * xPixelTest 1 0 2 3 4 5 6 pixel
+   141:  xPixel11 1 0 2 3 4 6  8 pixel
+   142:  xPixel12 1 0 2 3 4 7  9 pixel
+   143:  xPixel21 1 0 2 3 5 6 10 pixel
+   144:  xPixel22 1 0 2 3 5 7 11 pixel
+   145:  
+   146:  xLoad1 1 0 6 load
+   147:  xLoad2 1 0 7 load
+   148:  
+   149:  VDD 1 0 dc 1.8v
+   150:  * How to make pulse: Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)
+   151:  * V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
+   152:  vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 30m 40m)
+   153:  vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 40m)
+   154:  
+   155:  vNRE1 4 0 dc 1.8v
+   156:  vNRE2 5 0 dc 0v
+   157:  
+   158:  * How to make transient analysis: .TRAN TSTEP TSTOP
+   159:  .plot TRAN V(6) V(7)
+   160:  
+   161:  .tran 100n 40m
 
 ***************************  Model Parameters  ****************************
 
@@ -165,7 +185,7 @@
 **************************  Analysis Parameters  **************************
 
 	Stepsize ............ : 100n
-	Final time .......... : 12m
+	Final time .......... : 40m
 	Use Initial Conditions: Off
 
 
@@ -176,19 +196,19 @@
 
 *************************  Simulation Statistics  *************************
 
-	Total number of iterations.....................: 380
-	Number of iterations for transient analysis....: 357
-	Total number of timepoints.....................: 123
-	Number of timepoints accepted..................: 113
-	Number of timepoints rejected..................: 10
-	Total analysis time (sec)......................: 0.008
-	Transient analysis time (sec)..................: 0.006
-	Time spent in device loading (sec).............: 0.002
-	Time spent in L-U decomposition (sec)..........: 0
+	Total number of iterations.....................: 316
+	Number of iterations for transient analysis....: 293
+	Total number of timepoints.....................: 122
+	Number of timepoints accepted..................: 114
+	Number of timepoints rejected..................: 8
+	Total analysis time (sec)......................: 0.015
+	Transient analysis time (sec)..................: 0.013
+	Time spent in device loading (sec).............: 0.003
+	Time spent in L-U decomposition (sec)..........: 0.002
 	Time spent in matrix reordering (sec)..........: 0
-	Time spent in matrix solving (sec).............: 0
-	Time spent in transient L-U decomposition (sec): 0
-	Time spent in transient matrix solving (sec)...: 0
+	Time spent in matrix solving (sec).............: 0.001
+	Time spent in transient L-U decomposition (sec): 0.002
+	Time spent in transient matrix solving (sec)...: 0.001
 
 ***************************  Kernel Messages  *****************************
 
@@ -199,15 +219,16 @@ Warning: parameter xl not supported; value ignored
 Warning: parameter xw not supported; value ignored
 Warning: parameter xl not supported; value ignored
 Warning: parameter xw not supported; value ignored
-Warning: Pd = 0 is less than W for m:pixeltest:4 in model pmos.
-Warning: Ps = 0 is less than W for m:pixeltest:4 in model pmos.
-Warning: Pd = 0 is less than W for m:pixeltest:3 in model pmos.
-Warning: Ps = 0 is less than W for m:pixeltest:3 in model pmos.
-Warning: Pd = 0 is less than W for m:pixeltest:2 in model nmos.
-Warning: Ps = 0 is less than W for m:pixeltest:2 in model nmos.
+Warning: Pd = 0 is less than W for m:load2:c in model pmos.
+Warning: Ps = 0 is less than W for m:load2:c in model pmos.
+Warning: Pd = 0 is less than W for m:pixel22:4 in model pmos.
+Warning: Ps = 0 is less than W for m:pixel22:4 in model pmos.
+Warning: Pd = 0 is less than W for m:pixel22:3 in model pmos.
+Warning: Ps = 0 is less than W for m:pixel22:3 in model pmos.
+Warning: Pd = 0 is less than W for m:pixel22:2 in model nmos.
+Warning: Ps = 0 is less than W for m:pixel22:2 in model nmos.
 Warning: verase: no DC value, transient time 0 value used
 Warning: vexpose: no DC value, transient time 0 value used
-Warning: Node 5 has less than two connections
 Warning: verase: no DC value, transient time 0 value used
 Warning: vexpose: no DC value, transient time 0 value used
 

@@ -1,24 +1,30 @@
 [aimspice]
 [description]
-1161
+1507
 * Pixel subcircuit
 
 .include model_files/p18_cmos_models_tt.inc
 .include model_files/PhotoDiode.cir
 
 .param minW 1.08u
+.param maxW 5.04u
 .param maxL 1.08u
+.param minL 0.36u
 
 .param M1W minW
 .param M1L maxL
 .param M2W minW
 .param M2L maxL
-.param M3W 3u
-.param M3L 0.67u
+.param M3W maxW
+.param M3L minL
 .param M4W minW
 .param M4L maxL
 
-.param CS_value 2.5p
+.param MCW minW
+.param MCL maxL
+.param CC_value 3p
+
+.param CS_value 2p
 
 .subckt pixel VDD VSS EXPOSE ERASE NRE OUT N2
 xPhotoDiode VDD 1 PhotoDiode
@@ -34,21 +40,34 @@ M3 3 N2 VSS VDD PMOS W=M3W L=M3L
 M4 OUT NRE 3 VDD PMOS W=M4W L=M3L
 .ends
 
-xPixelTest 1 0 2 3 4 5 6 pixel
+.subckt load VDD VSS OUT
+MC VDD OUT OUT VDD PMOS W=MCW L=MCL
+CC OUT VSS CC_value
+.ends
+
+xPixel11 1 0 2 3 4 6  8 pixel
+xPixel12 1 0 2 3 4 7  9 pixel
+xPixel21 1 0 2 3 5 6 10 pixel
+xPixel22 1 0 2 3 5 7 11 pixel
+
+xLoad1 1 0 6 load
+xLoad2 1 0 7 load
 
 VDD 1 0 dc 1.8v
 * How to make pulse: Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)
 * V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
-vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 3m 12m)
-vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 12m)
-vNRE 4 0 dc 0v
+vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 30m 40m)
+vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 40m)
+
+vNRE1 4 0 dc 1.8v
+vNRE2 5 0 dc 0v
 
 * How to make transient analysis: .TRAN TSTEP TSTOP
-.plot TRAN V(6)
+.plot TRAN V(6) V(7)
 
 [tran]
 100n
-12m
+40m
 X
 X
 0
