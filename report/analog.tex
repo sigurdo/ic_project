@@ -6,4 +6,14 @@ In this circuit we will design the analog part of the camera, also called the pi
 
 \subsection{Choosing value for CS}
 
+To choose a suitable value for CS spice simulations can be used. To know what values are the best we can for example look at the four corner cases for exposure time and light conditions. The corner cases will be denoted exposure-light, so for example max-min is maximum exposure time and minimum light. Each corner simulation in spice produces a graph that shows the voltage over CS as a function of exposure time, and the value we are interested in is the voltage over CS at the end of the expose time. In the graph that means 3ms or 31ms since each simulation start with 1ms of erasing. There are many possible approaches to how these corners should be tuned, and the one that we have chosen here is the following:
+
+\begin{itemize}
+    \item Max-max corner should make CS fully charged.
+    \item Min-min corner should leave CS uncharged.
+    \item Min-max and max-min corners should make CS half full charged.
+\end{itemize}
+
+The reason for why we want the corners to be like that is beyond the scope of this report.
+
 \subsection{Choosing values for M3 and active load}
