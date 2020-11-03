@@ -1,0 +1,8 @@
+[Version]
+Version=11.1
+[Designs]
+camera_controller=camera_controller.adf
+[Settings]
+Active=camera_controller
+[Expand]
+camera_controller=1

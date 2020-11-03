@@ -1,0 +1,24 @@
+Active-HDL 11.1.262.7351 2020-11-03 15:54:49
+
+Elaboration top modules:
+Verilog Module                testbench
+
+
+---------------------------------------------------------------------------------------------------
+Verilog Module          | Library           | Info | Compiler Version        | Compilation Options
+---------------------------------------------------------------------------------------------------
+testbench               | camera_controller |      | 11.1.262.7351 (Windows) | -O2 -sv2k12
+camera_controller       | camera_controller |      | 11.1.262.7351 (Windows) | -O2 -sv2k12
+---------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------
+Library                 | Comment
+---------------------------------------------------------------------------------------------------
+camera_controller       | None
+---------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +accb +accr +access +r testbench
+
+
+The performance of simulation is reduced. Version Student Edition

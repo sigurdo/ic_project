@@ -1,0 +1,28 @@
+# Design Explorer: Shortcut to "C:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\verilog\camera_controller\camera_controller.aws" workspace added.
+# DESIGN: Default Design Language: VERILOG
+# DESIGN: Default BDE Language: VERILOG
+# DESIGN: Flow Manager: Not Defined
+alog -O2 -sve -msg 5 -sv2k12 -work camera_controller $dsn/src/camera_controller.v
+# Pass 1. Scanning modules hierarchy.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Unit top modules: camera_controller.
+# $root top modules: camera_controller.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work camera_controller $dsn/src/testbench.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: testbench.
+# $root top modules: camera_controller testbench.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
