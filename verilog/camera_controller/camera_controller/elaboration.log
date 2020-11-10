@@ -1,4 +1,4 @@
-Active-HDL 11.1.262.7351 2020-11-03 15:54:49
+Active-HDL 11.1.262.7351 2020-11-10 13:51:26
 
 Elaboration top modules:
 Verilog Module                testbench
@@ -16,9 +16,3 @@ Library                 | Comment
 ---------------------------------------------------------------------------------------------------
 camera_controller       | None
 ---------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +accb +accr +access +r testbench
-
-
-The performance of simulation is reduced. Version Student Edition

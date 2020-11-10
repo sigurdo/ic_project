@@ -37,8 +37,8 @@ output reg ADC ;
 output reg expose ;
 output reg erase ;
 
-reg [5:0] exp_time;
-reg [5:0] cnt;
+reg [4:0] exp_time;
+reg [4:0] cnt;
 reg [1:0] state;
 
 // -- Enter your statements here -- //
@@ -57,25 +57,66 @@ end
 
 always @(posedge clk) begin
     if (rst) begin
+        // Reset: Go to idle state
+        NRE_1 = 1;
+        NRE_2 = 1;
+        ADC = 0;
+        expose = 0;
+        erase = 1;
+
+        exp_time = 5'd16;
+        cnt = 5'd0;
         state = 2'd0;
     end else begin
-        if (state == 2'd0) begin
-            if (init) begin
-                state = 2'd1;
-                cnt = exp_time;
-            end else begin
-                if (exp_increase) begin
-                    exp_time++;
+        case (state)
+            2'd0: begin
+                // State is idle
+                if (init) begin
+                    // Go to exposure state
+                    erase = 0;
+                    expose = 1;
+                    cnt = exp_time - 1;
+                    state = 2'd1;
                 end else begin
-                    if (exp_decrease) begin
-                        exp_time--;
+                    if (exp_increase) begin
+                        if (exp_time < 30) exp_time++;
+                    end else if (exp_decrease) begin
+                        if (exp_time > 2) exp_time--;
                     end
                 end
             end
-        end
-        if (state == 2'd1) begin
-            cnt--;
-        end
+            2'd1: begin
+                // State is exposure
+                if (cnt > 0) begin
+                    cnt--;
+                end else begin
+                    // Go to readout state
+                    expose = 0;
+                    cnt = 5'd8;
+                    state = 2'd2;
+                end
+            end
+            2'd2: begin
+                // State is readout
+                if (cnt > 0) begin
+                    case (cnt)
+                        5'd8: NRE_1 = 0;
+                        5'd7: ADC = 1;
+                        5'd6: ADC = 0;
+                        5'd5: NRE_1 = 1;
+                        5'd4: NRE_2 = 0;
+                        5'd3: ADC = 1;
+                        5'd2: ADC = 0;
+                        5'd1: NRE_2 = 1;
+                    endcase
+                    cnt--;
+                end else begin
+                    // Go to idle state
+                    erase = 1;
+                    state = 2'd0;
+                end
+            end
+        endcase
     end
 end
 

@@ -17,7 +17,7 @@
 // Description : 
 //
 //-----------------------------------------------------------------------------
-`timescale 1 ns / 1 ps
+`timescale 1 ms / 1 us
 
 //{{ Section below this comment is automatically maintained
 //   and may be overwritten
@@ -50,10 +50,17 @@ initial begin
     init = 0;
     #1
     exp_increase = 1;
-    #10
-    exp_increase = 0;
+    #30
     exp_decrease = 1;
-    #10
+    #3
+    exp_increase = 0;
+    #40
+    exp_decrease = 0;
+    #5
+    init = 1;
+    #1
+    init = 0;
+    #50
     $finish;
 end
 

@@ -1,0 +1,18 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+camera_controller=1
+Built-in symbols=0
+[COMPILESTATUS|.\src\testbench.v]
+FileTimeLow=30847473
+Status=Compiled
+[COMPILESTATUS|.\src\camera_controller.v]
+FileTimeLow=30847473
+Status=Compiled
+[COMPILESTATUS|.\..\..\..\..\..\..\..\OneDrive-NTNU\elsys\semester5\ic\ic_project\verilog\camera_controller\src\waveform1.awc]
+FileTimeLow=30847470
+Status=Modified
+[COMPILESTATUS|.\..\..\..\..\..\..\..\OneDrive-NTNU\elsys\semester5\ic\ic_project\verilog\camera_controller\src\waveform2.awc]
+FileTimeLow=30847471
+Status=Modified
+[CACHEDOC|Aldec.WaveFormASDB.7|.\..\..\..\..\..\..\..\OneDrive-NTNU\elsys/semester5/ic/ic_project/verilog/camera_controller/src/waveform2.awc|]
+Frame=0
+WindowWorkspaceInfo="LAAAAAAAAAADAAAA/////////////////////80AAAB3AAAA/wUAAIoCAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAA="

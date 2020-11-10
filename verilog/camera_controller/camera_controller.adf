@@ -54,3 +54,7 @@ SimulationAccessNetsModules=
 .\src\camera_controller.v=Verilog Source Code
 .\..\..\..\..\..\..\..\OneDrive-NTNU\elsys\semester5\ic\ic_project\verilog\camera_controller\src\waveform1.awc=Accelerated Waveform Configuration
 .\..\..\..\..\..\..\..\OneDrive-NTNU\elsys\semester5\ic\ic_project\verilog\camera_controller\src\waveform2.awc=Accelerated Waveform Configuration
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

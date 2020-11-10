@@ -1,0 +1,25 @@
+States
+
+In any state: if rst, erase set high and state = 0 (idle)
+
+0: idle
+if init, state = 1 (exposure)
+else if exp_increase, increase exposure time
+else if exp_decrease, decrease exposure time
+
+1: exposure
+expose set high for the preset exposure time
+if exposure time is complete, exposure set low and state = 2 (readout)
+
+2: readout
+#1 nothing
+#2 NRE_R1 set low
+#3 ADC set high
+#4 ADC set low
+#5 NRE_R1 set high
+#6 NRE_R2 set low
+#7 ADC set high
+#8 ADC set low
+#9 NRE_R2 set high
+#10 nothing
+#11 erase set high, state = 0 (idle)
