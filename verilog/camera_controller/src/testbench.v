@@ -50,17 +50,27 @@ initial begin
     init = 0;
     #1
     exp_increase = 1;
-    #30
+    #5
     exp_decrease = 1;
     #3
-    exp_increase = 0;
-    #40
     exp_decrease = 0;
-    #5
+    #7
+    exp_increase = 0;
     init = 1;
     #1
     init = 0;
-    #50
+    #4
+    rst = 1;
+    #1
+    rst = 0;
+    #1
+    exp_decrease = 1;
+    #16
+    exp_decrease = 0;
+    init = 1;
+    #1
+    init = 0;
+    #16
     $finish;
 end
 

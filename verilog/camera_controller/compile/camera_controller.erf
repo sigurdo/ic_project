@@ -1,8 +1,8 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
-UPDATEPROGRESS 17
 UPDATEPROGRESS 35
+MESSAGE_SP VCP2113 "Module camera_controller found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
