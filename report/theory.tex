@@ -1,0 +1,48 @@
+\section{Theory}
+
+\subsection{Analog circuit}
+The analog circuit has input signals delivered by the digital circuitry, and delivers its output to two ADCs. The analog circuit diagram is given in figure XXX, where each of the four pixel block has the circuit given in figure XXX.
+
+% insert analog circuit here
+% insert pixel circuit here
+
+
+
+\subsubsection{Dimensions for switch transistors}
+\label{sec:switch_dimensions}
+The transistors M1, M2 and M4 all function as switches, where a digital gate input decides whether the transistor should act as a short-circuit between drain and source, or as an open circuit. Since these transistors simply should have two possible states, it is key that the leakage current is minimized. This is particularly important for M1 and M2 to ensure that the voltage over $C_s$ is as constant as possible during readout. In \emph{Analog Circuit Design} by Tony Chan Carusone, one can read in section 1.4.1 that the subthreshold leakage current is given by
+
+\begin{equation}
+    \label{eq:leakage}
+    I_{off} = (n-1) \mu_n C_{ox} \left( \frac{W}{L} \right) \left( \frac{kT}{q} \right)^2 \exp{(-qV_t / nkT)}.
+\end{equation}
+
+In order to minimize this leakage current, $\frac{W}{L}$ need to be as small as possible, meaning the smallest possible width $W$ and the largest possible length $L$ is desired. The technology used will limit the possible width and length of the transistor, thus $W$ and $L$ can be chosen accordingly.
+
+\subsubsection{Value for $C_s$}
+
+To choose a suitable value for $C_s$ spice simulations can be used. To know what values are the best we will look at the four corner cases for exposure time and light conditions. The corner cases will be denoted exposure-light, so for example max-min is maximum exposure time and minimum light. For each corner we will do a transient simulation. That means we will look at a graph that shows the voltage over $C_s$ as a function of time. In each light-exposure corner, the resulting voltage value that we are interested in is the voltage over $C_s$ at the end of the exposure. There are many possible approaches to how these corners should be tuned, and the one that we will apply is the following:
+
+\begin{itemize}
+    \item Max-max corner should make $C_s$ fully charged.
+    \item Min-min corner should leave $C_s$ uncharged.
+    \item Min-max and max-min corners should make $C_s$ half full charged.
+\end{itemize}
+
+The reason for why we want the corners to be like that is beyond the scope of this report.
+
+\subsubsection{Values for M3 and active load}
+
+\subsection{Digital camera controller}
+
+\subsubsection{Finite state machine}
+
+\subsubsection{Output timing}
+
+\subsubsection{Module interface}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/camera_controller_pinout.png}
+    \caption{Overview of input and output pins as well as internal regististers for the camera controller module.}
+\end{figure}
