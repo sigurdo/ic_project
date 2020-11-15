@@ -22,7 +22,7 @@ In detail, the analog circuit consists of 4 pixels in a 2x2 array. Each pixel in
 
 \subsubsection{Detailed decription of pixel circuit}
 
-The pixel circuit consists of
+Schematics for the pixel circuit is given in figure \ref{fig:pixelCircuit}. It consists of a photo diode PD1, three switch transistors M1, M2 and M4, one buffer transistor M3 and a charge storage capacitor $C_S$. The photo diode is modeled by a diode and an ideal current source in parallel. The current source outputs a current $I_D$ that is proportional to the illumination intensity on that particular pixel. This current is used to charge the transistor $C_S$. Ideally, we want that all of $I_D$ flows through M1 and into CS when EXPOSE is high and all of $I_D$ flows back through the diode in the photo diode model when EXPOSE is low.
 
 \subsubsection{Dimensions for switch transistors}
 \label{sec:switch_dimensions}
