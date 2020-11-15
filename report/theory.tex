@@ -4,14 +4,14 @@
 \label{sec:analogCircuit}
 The analog circuit has input signals delivered by the digital circuitry, and delivers its output to two ADCs. The analog circuit diagram is given in figure \ref{fig:analogCircuit}, where each of the four pixel block has the circuit given in figure \ref{fig:pixelCircuit}.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{graphs/analogCircuit.png}
     \caption{Analog circuit schematic.}
     \label{fig:analogCircuit}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{graphs/pixelCircuit.png}
     \caption{Pixel cicuit schematic.}
@@ -50,15 +50,31 @@ The reason for why we want the corners to be like that is beyond the scope of th
 \subsubsection{Values for M3 and active load}
 
 \subsection{Digital camera controller}
+The digital input signals in the analog circuit need to be controlled by a digital circuit - the digital camera controller.
 
 \subsubsection{Finite state machine}
+The wanted behaviour of the digital camera controller is described in the finite state machine (FSM) in figure \ref{fig:fsm}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/fsm.png}
+    \caption{The finite state machine for the digital camera controller.}
+    \label{fig:fsm}
+\end{figure}
+
+In the FSM, there are three states. The camera starts in the \emph{idle} state. In this state, the camera isn't in the process of taking any picture, so output signals \emph{expose} and \emph{ADC} should be \verb|LOW|, and \emph{NRE\_1} and \emph{NRE\_2} should be \verb|HIGH|. The camera should also prepare itself for a new picture in this state, so \emph{erase} should be \verb|HIGH| to erase any voltage from the potential previous exposure. The user should be able to adjust the exposure time with the signals \emph{exp\_increase} and \emph{exp\_decrease} in the \emph{idle} state. These signals will respectively increase or decrease the exposure time with $1$ms for each clock cycle they're \verb|HIGH| to a minimum of $2$ms and a maximum of $30$ms. When the signal \emph{init} is \verb|HIGH|, which happens when the user presses the shutter button on the camera, the camera will enter the \emph{exposure} state. The exception is if the \emph{rst} input signal is \verb|HIGH|. In any state, \emph{rst} being \verb|HIGH| should override any process and take the camera back to \emph{idle}.
+
+When the camera is entering the \emph{exposure} state, \emph{erase} should be set \verb|LOW| and \emph{expose} should be set \verb|HIGH| to begin the exposure. An internal register \emph{cnt} should hold the exposure time as a number of clock cycles, and decrement for each clock cycle. If \emph{rst} is \verb|HIGH| at any time during \emph{exposure}, the camera should return to the \emph{idle} state. When the \emph{cnt} register has reached $0$, the camera should enter the \emph{readout} state if \emph{rst} is \verb|LOW|.
+
+The \emph{readout} state is the final state, in which the data from the individual pixels are read and inputted in the ADC. First, \emph{expose} should be set \verb|LOW| since the exposure is done. Then, \emph{NRE\_1} should be \verb|LOW| first at the same time as \emph{ADC} is \verb|HIGH|, to read from the top two pixels and input it to the ADC. Lastly, \emph{NRE\_2} should be \verb|LOW| at the same time as \emph{ADC} is \verb|HIGH| to do the same for the bottom two pixels. Exactly how the output signals should be will be properly explored in the next section. As with the \emph{exposure} state, \emph{rst} being \verb|HIGH| at any time should return the camera to \emph{idle}.
 
 \subsubsection{Output timing}
 
 \subsubsection{Module interface}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{graphs/camera_controller_pinout.png}
     \caption{Overview of input and output pins as well as internal regististers for the camera controller module.}
+    \label{fig:io}
 \end{figure}
