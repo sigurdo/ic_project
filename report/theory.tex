@@ -78,7 +78,7 @@ The wanted behaviour of the digital camera controller is described in the finite
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{graphs/fsm.png}
+    \includegraphics[width=\textwidth]{graphs/fsm.png}
     \caption{The finite state machine for the digital camera controller.}
     \label{fig:fsm}
 \end{figure}
@@ -90,6 +90,17 @@ When the camera is entering the \emph{exposure} state, \emph{erase} should be se
 The \emph{readout} state is the final state, in which the data from the individual pixels are read and inputted in the ADC. First, \emph{expose} should be set \verb|LOW| since the exposure is done. Then, \emph{NRE\_1} should be \verb|LOW| first at the same time as \emph{ADC} is \verb|HIGH|, to read from the top two pixels and input it to the ADC. Lastly, \emph{NRE\_2} should be \verb|LOW| at the same time as \emph{ADC} is \verb|HIGH| to do the same for the bottom two pixels. Exactly how the output signals should be will be properly explored in the next section. As with the \emph{exposure} state, \emph{rst} being \verb|HIGH| at any time should return the camera to \emph{idle}.
 
 \subsubsection{Output timing}
+
+The desired time chartis illustrated in figure \ref{fig:timechart}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{graphs/time_chart.png}
+    \caption{The desired time chart for the output signals of the digital camera controller.}
+    \label{fig:timechart}
+\end{figure}
+
+In the \emph{idle} state and \emph{exposure} state, the output signals are as described in the previous subsection. Notably, \emph{erase} is \verb|HIGH| during \emph{idle} and \emph{expose} is \verb|HIGH| during \emph{exposure}. The \emph{readout} state is more complex, as output signals are altered in every clock cycle. In the first cycle, $T_3$ in the figure, \emph{expose} is set \verb|LOW| to end exposure before readout begins. From $T_4$ to $T_6$, \emph{NRE\_1} is set \verb|LOW|, with \emph{ADC} being \verb|HIGH| in the middle $T_5$. This is to ensure that \emph{NRE\_1} is not transienting from \verb|HIGH| to \verb|LOW| or \verb|LOW| to \verb|HIGH| while the ADC is reading. In $T_7$, \emph{NRE\_1} is set \verb|HIGH| again. From $T_8$ to $T_{10}$, the reading process repeats for \emph{NRE\_2} to read the bottom two pixels. In the last clock cycle of the state, $T_{11}$, \emph{NRE\_2} is set \verb|HIGH| again to end the readout.
 
 \subsubsection{Module interface}
 
