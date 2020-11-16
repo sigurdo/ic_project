@@ -20,9 +20,21 @@ The analog circuit has input signals delivered by the digital circuitry, and del
 
 In detail, the analog circuit consists of 4 pixels in a 2x2 array. Each pixel in the same row shares the same NRE (Not-REad) input which means they are sending data to the ADC at the same time. Each pixel in the same column share the same active load and readout wire, which means they need to send data to the ADC at different times.
 
-\subsubsection{Detailed decription of pixel circuit}
+\subsubsection{Conceptual operation of pixel circuit}
 
-Schematics for the pixel circuit is given in figure \ref{fig:pixelCircuit}. It consists of a photo diode PD1, three switch transistors M1, M2 and M4, one buffer transistor M3 and a charge storage capacitor $C_S$. The photo diode is modeled by a diode and an ideal current source in parallel. The current source outputs a current $I_D$ that is proportional to the illumination intensity on that particular pixel. This current is used to charge the transistor $C_S$. Ideally, we want that all of $I_D$ flows through M1 and into CS when EXPOSE is high and all of $I_D$ flows back through the diode in the photo diode model when EXPOSE is low.
+Schematics for the pixel circuit is given in figure \ref{fig:pixelCircuit}. It consists of a photo diode PD1, three switch transistors M1, M2 and M4, one buffer transistor M3 and a charge storage capacitor $C_S$. The photo diode is modeled by a diode and an ideal current source in parallel. The current source outputs a current $I_D$ that is proportional to the illumination intensity on that particular pixel. This current is used to charge the transistor $C_S$. Ideally, we want that all of $I_D$ flows through M1 and into $C_S$ when EXPOSE is high and all of $I_D$ flows back through the diode in the photo diode model when EXPOSE is low. In that way the voltage on node N2 when EXPOSE has been high for a time $t$ is given by
+
+\begin{equation}
+    V_{CS}(t) = \frac{1}{C_S} \int_0^t I_D(t) dt.
+\end{equation}
+
+This means the voltage $V_{CS}$ is proportional to the total illumination on the pixel throughout the exposure time, which is exactly what we want.
+
+But since the camera is supposed to be reusable, we need a way to erase that charge before taking a new picture. That is what M2 is for. Ideally we want M2 to be a perfect switch, so that when ERASE is high, $C_S$ is instantly uncharged through M2 and when ERASE is low, M2 does not conduct any current at all.
+
+For the readout we do not want to connect N2 directly to OUT, since the output wire might be very long and have a big capacitance. Instead, the voltage $V_{CS}$ controls the conductance through a transistor M3. The higher $V_{CS}$, the lower conductance through M3 and higher voltage on OUT. In that way, the current required to control the voltage on the output wire is supplied through the active load in the top of each output wire, outside the pixel circit.
+
+But since all pixels in the same column share the same output wire we need a way to unconnect N3 from OUT, and that is what M4 is for. M4 is supposed to be an ideal switch so that the pixel is driving OUT only when NRE is low.
 
 \subsubsection{Dimensions for switch transistors}
 \label{sec:switch_dimensions}
@@ -48,6 +60,10 @@ To choose a suitable value for $C_s$ spice simulations can be used. To know what
 The reason for why we want the corners to be like that is beyond the scope of this report.
 
 \subsubsection{Values for M3 and active load}
+
+% Hmmmm, I need to open aimspice again...
+
+Values for M3 and active load should be tuned using SPICE simultations for maximum dynamic range, but exact tuning will not affect very much since it is a very robust and self-regulating system.
 
 \subsection{Digital camera controller}
 The digital input signals in the analog circuit need to be controlled by a digital circuit - the digital camera controller.

@@ -7,7 +7,7 @@
                  *                                           *
                  *********************************************
 
-	Date: Tue Oct 27 14:40:14 2020
+	Date: Mon Nov 16 12:51:38 2020
 	Circuit File: C:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\local_aimspiceshit\main.cir
 	Analysis: Transient
 
@@ -127,8 +127,8 @@
    112:  .param M4W minW
    113:  .param M4L maxL
    114:  
-   115:  .param MCW minW
-   116:  .param MCL maxL
+   115:  .param MCW minW 
+   116:  .param MCL maxL 
    117:  .param CC_value 3p
    118:  
    119:  .param CS_value 2p
@@ -152,26 +152,26 @@
    137:  CC OUT VSS CC_value
    138:  .ends
    139:  
-   140:  * xPixelTest 1 0 2 3 4 5 6 pixel
-   141:  xPixel11 1 0 2 3 4 6  8 pixel
-   142:  xPixel12 1 0 2 3 4 7  9 pixel
-   143:  xPixel21 1 0 2 3 5 6 10 pixel
-   144:  xPixel22 1 0 2 3 5 7 11 pixel
-   145:  
-   146:  xLoad1 1 0 6 load
-   147:  xLoad2 1 0 7 load
-   148:  
-   149:  VDD 1 0 dc 1.8v
-   150:  * How to make pulse: Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)
-   151:  * V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
-   152:  vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 30m 40m)
-   153:  vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 40m)
-   154:  
-   155:  vNRE1 4 0 dc 1.8v
-   156:  vNRE2 5 0 dc 0v
-   157:  
-   158:  * How to make transient analysis: .TRAN TSTEP TSTOP
-   159:  .plot TRAN V(6) V(7)
+   140:  xPixel11 1 0 2 3 4 6  8 pixel
+   141:  xPixel12 1 0 2 3 4 7  9 pixel
+   142:  xPixel21 1 0 2 3 5 6 10 pixel
+   143:  xPixel22 1 0 2 3 5 7 11 pixel
+   144:  
+   145:  xLoad1 1 0 6 load
+   146:  xLoad2 1 0 7 load
+   147:  
+   148:  VDD 1 0 dc 1.8v
+   149:  * How to make pulse: Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)
+   150:  * V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
+   151:  vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 30m 40m)
+   152:  vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 40m)
+   153:  
+   154:  vNRE1 4 0 dc 1.8v
+   155:  vNRE2 5 0 dc 0v
+   156:  
+   157:  * How to make transient analysis: .TRAN TSTEP TSTOP
+   158:  .plot TRAN V(6) V(7)
+   159:  
    160:  
    161:  .tran 100n 40m
 
@@ -201,14 +201,14 @@
 	Total number of timepoints.....................: 122
 	Number of timepoints accepted..................: 114
 	Number of timepoints rejected..................: 8
-	Total analysis time (sec)......................: 0.015
-	Transient analysis time (sec)..................: 0.013
+	Total analysis time (sec)......................: 0.021
+	Transient analysis time (sec)..................: 0.02
 	Time spent in device loading (sec).............: 0.003
-	Time spent in L-U decomposition (sec)..........: 0.002
+	Time spent in L-U decomposition (sec)..........: 0
 	Time spent in matrix reordering (sec)..........: 0
-	Time spent in matrix solving (sec).............: 0.001
-	Time spent in transient L-U decomposition (sec): 0.002
-	Time spent in transient matrix solving (sec)...: 0.001
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
 
 ***************************  Kernel Messages  *****************************
 

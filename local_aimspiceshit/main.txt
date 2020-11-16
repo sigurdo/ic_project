@@ -1,6 +1,6 @@
 [aimspice]
 [description]
-1509
+1507
 * Pixel subcircuit
 
 .include model_files/p18_cmos_models_tt.inc
@@ -20,8 +20,8 @@
 .param M4W minW
 .param M4L maxL
 
-.param MCW minW 
-.param MCL maxL 
+.param MCW minW
+.param MCL maxL
 .param CC_value 3p
 
 .param CS_value 2p

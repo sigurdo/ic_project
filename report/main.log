@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.2)  15 NOV 2020 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.2)  16 NOV 2020 13:02
 entering extended mode
 **"c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/main.tex"
 ("c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/main.tex"
@@ -38,12 +38,19 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@dirtytalk@qdepth=\count175
+) ("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count176
+\float@exts=\toks18
+\float@box=\box45
+\@float@everytoks=\toks19
+\@floatcapt=\box46
 ) ("C:\Program Files\MiKTeX\tex/latex/natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip49
 \bibsep=\skip50
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count176
+\c@NAT@ctr=\count177
 ) ("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
  ("C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty"
@@ -66,9 +73,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  ("C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count177
-\Gm@cntv=\count178
-\c@Gm@tempcnt=\count179
+\Gm@cnth=\count178
+\Gm@cntv=\count179
+\c@Gm@tempcnt=\count180
 \Gm@bindingoffset=\dimen137
 \Gm@wd@mp=\dimen138
 \Gm@odd@mp=\dimen139
@@ -77,41 +84,41 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutheight=\dimen142
 \Gm@layouthoffset=\dimen143
 \Gm@layoutvoffset=\dimen144
-\Gm@dimlist=\toks18
+\Gm@dimlist=\toks20
  ("C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg")) ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count180
-\l__pdf_internal_box=\box45
+\l__kernel_color_stack_int=\count181
+\l__pdf_internal_box=\box47
 ) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.aux")
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
  ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count181
+\scratchcounter=\count182
 \scratchdimen=\dimen145
-\scratchbox=\box46
-\nofMPsegments=\count182
-\nofMParguments=\count183
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count184
+\scratchbox=\box48
+\nofMPsegments=\count183
+\nofMParguments=\count184
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count185
 \MPscratchDim=\dimen146
-\MPnumerator=\count185
-\makeMPintoPDFobject=\count186
-\everyMPtoPDFconversion=\toks20
+\MPnumerator=\count186
+\makeMPintoPDFobject=\count187
+\everyMPtoPDFconversion=\toks22
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -151,11 +158,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 15.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
+(Font)              <6> on input line 18.
 [1
 
 {C:/Users/Sigurd/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\introduction.tex") ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\theory.tex"
@@ -164,60 +171,68 @@ File: graphs/analogCircuit.png Graphic file (type png)
 <use graphs/analogCircuit.png>
 Package pdftex.def Info: graphs/analogCircuit.png  used on input line 9.
 (pdftex.def)             Requested size: 317.98921pt x 452.63623pt.
-<graphs/pixelCircuit.png, id=9, 1420.55719pt x 617.30624pt>
+ [2]
+<graphs/pixelCircuit.png, id=13, 1420.55719pt x 617.30624pt>
 File: graphs/pixelCircuit.png Graphic file (type png)
 <use graphs/pixelCircuit.png>
 Package pdftex.def Info: graphs/pixelCircuit.png  used on input line 16.
 (pdftex.def)             Requested size: 397.485pt x 172.7221pt.
+ [3 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/analogCircuit.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 25.
- [2] [3 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/analogCircuit.png>]
-<graphs/camera_controller_pinout.png, id=25, 368.577pt x 188.3838pt>
+ [4 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/pixelCircuit.png>] [5]
+<graphs/fsm.png, id=33, 676.5275pt x 470.75874pt>
+File: graphs/fsm.png Graphic file (type png)
+<use graphs/fsm.png>
+Package pdftex.def Info: graphs/fsm.png  used on input line 76.
+(pdftex.def)             Requested size: 278.23828pt x 193.61572pt.
+ [6 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/fsm.png>]
+<graphs/camera_controller_pinout.png, id=40, 368.577pt x 188.3838pt>
 File: graphs/camera_controller_pinout.png Graphic file (type png)
 <use graphs/camera_controller_pinout.png>
-Package pdftex.def Info: graphs/camera_controller_pinout.png  used on input line 62.
+Package pdftex.def Info: graphs/camera_controller_pinout.png  used on input line 93.
 (pdftex.def)             Requested size: 278.23828pt x 142.21307pt.
-) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\results.tex" [4 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/pixelCircuit.png>]
-<graphs/minExp_minLight.png, id=31, 946.13475pt x 334.851pt>
+) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\results.tex" [7 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/camera_controller_pinout.png>]
+<graphs/minExp_minLight.png, id=46, 946.13475pt x 334.851pt>
 File: graphs/minExp_minLight.png Graphic file (type png)
 <use graphs/minExp_minLight.png>
 Package pdftex.def Info: graphs/minExp_minLight.png  used on input line 24.
 (pdftex.def)             Requested size: 397.485pt x 140.67221pt.
-<graphs/minExp_maxLight.png, id=33, 949.146pt x 336.0555pt>
+<graphs/minExp_maxLight.png, id=47, 949.146pt x 336.0555pt>
 File: graphs/minExp_maxLight.png Graphic file (type png)
 <use graphs/minExp_maxLight.png>
 Package pdftex.def Info: graphs/minExp_maxLight.png  used on input line 31.
 (pdftex.def)             Requested size: 397.485pt x 140.73212pt.
-<graphs/maxExp_minLight.png, id=34, 949.74825pt x 336.0555pt>
+<graphs/maxExp_minLight.png, id=48, 949.74825pt x 336.0555pt>
 File: graphs/maxExp_minLight.png Graphic file (type png)
 <use graphs/maxExp_minLight.png>
 Package pdftex.def Info: graphs/maxExp_minLight.png  used on input line 38.
 (pdftex.def)             Requested size: 397.485pt x 140.64494pt.
-<graphs/maxExp_maxLight.png, id=35, 946.737pt x 339.06676pt>
+<graphs/maxExp_maxLight.png, id=49, 946.737pt x 339.06676pt>
 File: graphs/maxExp_maxLight.png Graphic file (type png)
 <use graphs/maxExp_maxLight.png>
 Package pdftex.def Info: graphs/maxExp_maxLight.png  used on input line 45.
 (pdftex.def)             Requested size: 397.485pt x 142.35532pt.
-<graphs/digital_waveform.png, id=36, 948.54375pt x 221.02576pt>
+<graphs/digital_waveform.png, id=50, 948.54375pt x 221.02576pt>
 File: graphs/digital_waveform.png Graphic file (type png)
 <use graphs/digital_waveform.png>
 Package pdftex.def Info: graphs/digital_waveform.png  used on input line 60.
 (pdftex.def)             Requested size: 397.485pt x 92.62108pt.
-) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\discussion.tex") [5 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/camera_controller_pinout.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_minLight.png>] [6 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_maxLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_minLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_maxLight.png>] [7 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/digital_waveform.png>] ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.aux") ) 
+ [8 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_minLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_maxLight.png>] [9 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_minLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_maxLight.png>]) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\discussion.tex") [10 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/digital_waveform.png>] ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.aux") ) 
 Here is how much of TeX's memory you used:
- 2510 strings out of 480790
- 37594 string characters out of 2907052
- 283419 words of memory out of 3000000
- 18498 multiletter control sequences out of 15000+200000
- 537274 words of font info for 40 fonts, out of 3000000 for 9000
+ 2581 strings out of 480790
+ 38508 string characters out of 2907052
+ 284826 words of memory out of 3000000
+ 18563 multiletter control sequences out of 15000+200000
+ 537442 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,6n,34p,800b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Sigurd\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.pdf" (7 pages, 426971 bytes).
+ 33i,6n,34p,1215b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Sigurd\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.pdf" (10 pages, 472840 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -20,6 +20,8 @@ INPUT C:\Program Files\MiKTeX\tex\generic\kvsetkeys\kvsetkeys.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\kvsetkeys\kvsetkeys.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\natbib\natbib.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\natbib\natbib.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
@@ -81,6 +83,12 @@ INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graph
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
+INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\fsm.png
+INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\fsm.png
+INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\fsm.png
+INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\fsm.png
+INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\fsm.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\camera_controller_pinout.png
 INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\camera_controller_pinout.png
 INPUT c:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\graphs\camera_controller_pinout.png
@@ -140,3 +148,5 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
