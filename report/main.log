@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.2)  16 NOV 2020 13:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.2)  16 NOV 2020 16:20
 entering extended mode
 **"c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/main.tex"
 ("c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/main.tex"
@@ -182,57 +182,63 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 25.
- [4 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/pixelCircuit.png>] [5]
-<graphs/fsm.png, id=33, 676.5275pt x 470.75874pt>
+ [4 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/pixelCircuit.png>]
+<graphs/m3AndActiveLoad.png, id=27, 322.806pt x 302.5704pt>
+File: graphs/m3AndActiveLoad.png Graphic file (type png)
+<use graphs/m3AndActiveLoad.png>
+Package pdftex.def Info: graphs/m3AndActiveLoad.png  used on input line 66.
+(pdftex.def)             Requested size: 198.7425pt x 186.28514pt.
+ [5]
+<graphs/fsm.png, id=35, 676.5275pt x 470.75874pt>
 File: graphs/fsm.png Graphic file (type png)
 <use graphs/fsm.png>
-Package pdftex.def Info: graphs/fsm.png  used on input line 76.
+Package pdftex.def Info: graphs/fsm.png  used on input line 81.
 (pdftex.def)             Requested size: 278.23828pt x 193.61572pt.
- [6 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/fsm.png>]
+ [6 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/m3AndActiveLoad.png>]
 <graphs/camera_controller_pinout.png, id=40, 368.577pt x 188.3838pt>
 File: graphs/camera_controller_pinout.png Graphic file (type png)
 <use graphs/camera_controller_pinout.png>
-Package pdftex.def Info: graphs/camera_controller_pinout.png  used on input line 93.
+Package pdftex.def Info: graphs/camera_controller_pinout.png  used on input line 98.
 (pdftex.def)             Requested size: 278.23828pt x 142.21307pt.
-) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\results.tex" [7 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/camera_controller_pinout.png>]
-<graphs/minExp_minLight.png, id=46, 946.13475pt x 334.851pt>
+) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\results.tex" [7 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/fsm.png>]
+<graphs/minExp_minLight.png, id=47, 946.13475pt x 334.851pt>
 File: graphs/minExp_minLight.png Graphic file (type png)
 <use graphs/minExp_minLight.png>
 Package pdftex.def Info: graphs/minExp_minLight.png  used on input line 24.
 (pdftex.def)             Requested size: 397.485pt x 140.67221pt.
-<graphs/minExp_maxLight.png, id=47, 949.146pt x 336.0555pt>
+<graphs/minExp_maxLight.png, id=48, 949.146pt x 336.0555pt>
 File: graphs/minExp_maxLight.png Graphic file (type png)
 <use graphs/minExp_maxLight.png>
 Package pdftex.def Info: graphs/minExp_maxLight.png  used on input line 31.
 (pdftex.def)             Requested size: 397.485pt x 140.73212pt.
-<graphs/maxExp_minLight.png, id=48, 949.74825pt x 336.0555pt>
+<graphs/maxExp_minLight.png, id=49, 949.74825pt x 336.0555pt>
 File: graphs/maxExp_minLight.png Graphic file (type png)
 <use graphs/maxExp_minLight.png>
 Package pdftex.def Info: graphs/maxExp_minLight.png  used on input line 38.
 (pdftex.def)             Requested size: 397.485pt x 140.64494pt.
-<graphs/maxExp_maxLight.png, id=49, 946.737pt x 339.06676pt>
+<graphs/maxExp_maxLight.png, id=50, 946.737pt x 339.06676pt>
 File: graphs/maxExp_maxLight.png Graphic file (type png)
 <use graphs/maxExp_maxLight.png>
 Package pdftex.def Info: graphs/maxExp_maxLight.png  used on input line 45.
 (pdftex.def)             Requested size: 397.485pt x 142.35532pt.
-<graphs/digital_waveform.png, id=50, 948.54375pt x 221.02576pt>
+<graphs/digital_waveform.png, id=51, 948.54375pt x 221.02576pt>
 File: graphs/digital_waveform.png Graphic file (type png)
 <use graphs/digital_waveform.png>
 Package pdftex.def Info: graphs/digital_waveform.png  used on input line 60.
 (pdftex.def)             Requested size: 397.485pt x 92.62108pt.
- [8 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_minLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_maxLight.png>] [9 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_minLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_maxLight.png>]) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\discussion.tex") [10 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/digital_waveform.png>] ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.aux") ) 
+ [8 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/camera_controller_pinout.png>] [9 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_minLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/minExp_maxLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_minLight.png>]) ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\discussion.tex") [10 <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/maxExp_maxLight.png> <c:/Users/Sigurd/OneDrive - NTNU/elsys/semester5/ic/ic_project/report/graphs/digital_waveform.png>] ("c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.aux") ) 
 Here is how much of TeX's memory you used:
- 2581 strings out of 480790
- 38508 string characters out of 2907052
- 284826 words of memory out of 3000000
- 18563 multiletter control sequences out of 15000+200000
+ 2588 strings out of 480790
+ 38697 string characters out of 2907052
+ 284835 words of memory out of 3000000
+ 18569 multiletter control sequences out of 15000+200000
  537442 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,6n,34p,1215b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,6n,34p,1228b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Sigurd\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.pdf" (10 pages, 472840 bytes).
+Output written on "c:/Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\report\main.pdf" (10 pages, 481609 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

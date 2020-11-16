@@ -1,6 +1,6 @@
 [aimspice]
 [description]
-1509
+1519
 * Pixel subcircuit
 
 .include model_files/p18_cmos_models_tt.inc
@@ -63,7 +63,7 @@ vNRE1 4 0 dc 1.8v
 vNRE2 5 0 dc 0v
 
 * How to make transient analysis: .TRAN TSTEP TSTOP
-.plot TRAN V(6) V(7)
+.plot TRAN V(6) V(7) V(2) V(3)
 
 [tran]
 100n

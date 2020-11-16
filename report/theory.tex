@@ -61,9 +61,14 @@ The reason for why we want the corners to be like that is beyond the scope of th
 
 \subsubsection{Values for M3 and active load}
 
-% Hmmmm, I need to open aimspice again...
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{graphs/m3AndActiveLoad.png}
+    \caption{Simplified schematic for output voltage driving circuit.}
+    \label{fig:m3AndActiveLoad}
+\end{figure}
 
-Values for M3 and active load should be tuned using SPICE simultations for maximum dynamic range, but exact tuning will not affect very much since it is a very robust and self-regulating system.
+Values for M3 and active load should be tuned for maximum dynamic range, but it will not have a very big impact since it is a very robust and self-regulating system. If we assume $C_{C1}$ and $C_{C2}$ are very small, the output system can be simplified to figure \ref{fig:m3AndActiveLoad}. Essentially, the output voltage $V_{OUT}$ depends on how the conductance in the uppermost and downmost transistor are relative to each other. These conductances are proportional to $W/L$ in the transistors and they also vary with the gate-source voltages. To avoid unnecessary simplifications, it is best to decide these $W/L$-ratios from SPICE-simulations. One simple way to do a such simulation is to use transient analysis on the netlist for the full analog circuit, set NRE\_1 low and NRE\_2 high. ERASE should first be high a little while, then when it gets low, EXPOSE goes high, and it should be high long enough for the voltage on the OUT wires to reach its maximum value. The dynamic range is the difference between the maximum and minimum of this curve, and it is preferable that it is as big as possible.
 
 \subsection{Digital camera controller}
 The digital input signals in the analog circuit need to be controlled by a digital circuit - the digital camera controller.

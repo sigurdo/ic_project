@@ -7,7 +7,7 @@
                  *                                           *
                  *********************************************
 
-	Date: Mon Nov 16 12:51:38 2020
+	Date: Mon Nov 16 15:50:24 2020
 	Circuit File: C:\Users\Sigurd\OneDrive - NTNU\elsys\semester5\ic\ic_project\local_aimspiceshit\main.cir
 	Analysis: Transient
 
@@ -170,10 +170,9 @@
    155:  vNRE2 5 0 dc 0v
    156:  
    157:  * How to make transient analysis: .TRAN TSTEP TSTOP
-   158:  .plot TRAN V(6) V(7)
+   158:  .plot TRAN V(6) V(7) V(2) V(3)
    159:  
-   160:  
-   161:  .tran 100n 40m
+   160:  .tran 100n 40m
 
 ***************************  Model Parameters  ****************************
 
@@ -201,9 +200,9 @@
 	Total number of timepoints.....................: 122
 	Number of timepoints accepted..................: 114
 	Number of timepoints rejected..................: 8
-	Total analysis time (sec)......................: 0.021
+	Total analysis time (sec)......................: 0.022
 	Transient analysis time (sec)..................: 0.02
-	Time spent in device loading (sec).............: 0.003
+	Time spent in device loading (sec).............: 0.004
 	Time spent in L-U decomposition (sec)..........: 0
 	Time spent in matrix reordering (sec)..........: 0
 	Time spent in matrix solving (sec).............: 0
