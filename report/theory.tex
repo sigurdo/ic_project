@@ -75,11 +75,7 @@ Values for M3 and active load should be tuned for maximum dynamic range, but it 
 It is important to look at how process variations will impact an analog design. One way to do this is to look at the what is called FF, FS, SF and SS corners. F means fast, S means slow, the first letter is for NMOS and the second is for PMOS. The values to measure in each corner are the off resistance and on resistance, and they must not vary too much.
 
 \subsection{Digital camera controller}
-The digital input signals in the analog circuit need to be controlled by a digital circuit - the digital camera controller.
-
-\subsubsection{Module interface}
-
-The module interface for the digital camera controller is described in the figure below.
+The digital input signals in the analog circuit need to be controlled by a digital circuit - the digital camera controller. The module interface for the digital camera controller is described in the figure below.
 
 \begin{figure}[H]
     \centering
@@ -93,6 +89,7 @@ It has inputs \emph{init}, \emph{exp\_increase}, \emph{exp\_decrease}, \emph{clk
 The outputs are \emph{NRE\_1}, \emph{NRE\_2}, \emph{ADC}, \emph{EXPOSE} and \emph{ERASE}, all of which were described in section \ref{sec:analogCircuit}.
 
 \subsubsection{Finite state machine}
+\label{sec:fsm}
 The wanted behaviour of the digital camera controller is described in the finite state machine (FSM) in figure \ref{fig:fsm}.
 
 \begin{figure}[H]
@@ -119,4 +116,4 @@ The desired time chartis illustrated in figure \ref{fig:timechart}.
     \label{fig:timechart}
 \end{figure}
 
-In the \emph{idle} state and \emph{exposure} state, the output signals are as described in the previous subsection. Notably, \emph{ERASE} is \verb|HIGH| during \emph{idle} and \emph{EXPOSE} is \verb|HIGH| during \emph{exposure}. The \emph{readout} state is more complex, as output signals are altered in every clock cycle. In the first cycle, $T_3$ in the figure, \emph{EXPOSE} is set \verb|LOW| to end exposure before readout begins. From $T_4$ to $T_6$, \emph{NRE\_1} is set \verb|LOW|, with \emph{ADC} being \verb|HIGH| in the middle $T_5$. This is to ensure that \emph{NRE\_1} is not transienting from \verb|HIGH| to \verb|LOW| or \verb|LOW| to \verb|HIGH| while the ADC is reading. In $T_7$, \emph{NRE\_1} is set \verb|HIGH| again. From $T_8$ to $T_{10}$, the reading process repeats for \emph{NRE\_2} to read the bottom two pixels. In the last clock cycle of the state, $T_{11}$, \emph{NRE\_2} is set \verb|HIGH| again to end the readout.
+In the \emph{idle} state and \emph{exposure} state, the output signals are as described in the previous subsection. Notably, \emph{ERASE} is \verb|HIGH| during \emph{idle} and \emph{EXPOSE} is \verb|HIGH| during \emph{exposure}. The \emph{readout} state is more complex, as output signals are altered in every clock cycle. In the first cycle, $T_3$ in the figure, \emph{EXPOSE} is set \verb|LOW| to end exposure before readout begins. From $T_4$ to $T_6$, \emph{NRE\_1} is set \verb|LOW|, with \emph{ADC} being \verb|HIGH| in the middle $T_5$. This is to ensure that \emph{NRE\_1} is not transienting from \verb|HIGH| to \verb|LOW| or \verb|LOW| to \verb|HIGH| while the ADC is reading. In $T_7$, \emph{NRE\_1} is set \verb|HIGH| again. From $T_8$ to $T_{10}$, the reading process repeats for \emph{NRE\_2} to read the bottom two pixels. In the last clock cycle of the state, $T_{11}$, \emph{NRE\_2} is set \verb|HIGH| again to end the readout. It can be noted that the \emph{readout} state has a fixed duration of $9$ clock cycles, as the only state with a fixed duration.

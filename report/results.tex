@@ -51,11 +51,24 @@ CS was tuned to $2 \mathrm{pF}$. The output from simulations with this value for
 
 \subsection{Digital circuit}
 
+% refer to code in appendix
+% module interface
+% explain what state 0, 1 and 2 is
+
 \subsubsection{Digital circuit simulation}
 
-Explaining the big waveform.
+A grand showcase of the properties of the implemented camera controller is shown in figure \ref{fig:waveform}. The first five signals in the list to the left are the input signals, the following five are the output signals, and the last three are the internal registers.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{graphs/digital_waveform.png}
+    \label{fig:waveform}
 \end{figure}
+
+Up until the 16th clock cycle in figure \ref{fig:waveform}, the camera is in the \emph{idle} state. All output signals are true to the \emph{idle} state as it is described in section \ref{sec:fsm}; \emph{ERASE}, \emph{NRE\_1} and \emph{NRE\_2} are \verb|HIGH|, and \emph{EXPOSE} and \emph{ADC} are \verb|LOW|. From the second clock cycle to the 16th, \emph{exp\_increase} is \verb|HIGH|. \emph{exp\_time} increments for each clock cycle in this interval, until it reaches $30$ at the 15th cycle and stays constant. This shows that the exposure time will not exceed $30$ms, as specified in section \ref{sec:fsm}. It has also been made a point from clock cycle seven to nine that \emph{exp\_increase} overrides \emph{exp\_decrease} where they collide, a behaviour which also was specified as intended in section \ref{sec:fsm}.
+
+In the 17th clock cycle, \emph{init} is \verb|HIGH|, which sends the camera into the \emph{exposure} state. The output signals act accordingly as \emph{ERASE} goes \verb|LOW| and \emph{EXPOSE} goes \verb|HIGH|. \emph{cnt} is set to $29$ and begins decrementing for each clock cycle. The \emph{exposure} state is stopped short at cycle 22, where \emph{rst} goes high for one cycle. As desired, this returns the camera to the \emph{idle} state and sets \emph{exp\_time} back to its default, $16$.
+
+Then, from cycle 24 to 39, \emph{exp\_decrease} is set \verb|LOW|. \emph{exp\_time} decrements as intended, and stays constant after it reaches the minimum of $2$. In the 40th cycle, \emph{init} is \verb|HIGH| again, causing the camera to enter the \emph{exposure} state. \emph{cnt} is set to $1$, and decrements for one cycle, after which it has reached $0$. True to the FSM illustrated in figure \ref{fig:fsm}, this prompts the camera to enter the \emph{readout} state.
+
+The \emph{cnt} register is set to $8$ as the camera switches to \emph{readout}. It rightfully decrements for each clock cycle, and the output signals act exactly as specified for the \emph{readout} state in figure \ref{fig:timechart}. When the readout is finished, i.e. after \emph{cnt} has reached $0$, the camera enters the \emph{idle} state again.
