@@ -1,6 +1,31 @@
 \section{Results}
 \subsection{Analog pixel circuit}
 \subsubsection{Values and dimensions}
+
+\begin{table}
+    \centering
+    \caption{Chosen component values based on simulations. N/A means not applicable.}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Component & $W$ & $L$ & $C$ \\
+        \hline
+        M1 & $1.08 \mathrm{\mu m}$ & $1.08 \mathrm{\mu m}$ & N/A \\
+        \hline
+        M2 & $1.08 \mathrm{\mu m}$ & $1.08 \mathrm{\mu m}$ & N/A \\
+        \hline
+        M3 & $5.04 \mathrm{\mu m}$ & $0.36 \mathrm{\mu m}$ & N/A \\
+        \hline
+        M4 & $1.08 \mathrm{\mu m}$ & $1.08 \mathrm{\mu m}$ & N/A \\
+        \hline
+        MC1 & $1.08 \mathrm{\mu m}$ & $1.08 \mathrm{\mu m}$ & N/A \\
+        \hline
+        MC2 & $1.08 \mathrm{\mu m}$ & $1.08 \mathrm{\mu m}$ & N/A \\
+        \hline
+        $C_S$ & N/A & N/A & $2 \mathrm{pF}$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
 The transistor technology used limits the width to 
 
 \begin{equation}
@@ -15,9 +40,9 @@ and limits the length to
     0.36 \mathrm{\mu m} \leq L \leq 1.08 \mathrm{\mu m}.
 \end{equation}
 
-As explained in section \ref{sec:switch_dimensions}, the length and width of the switch transistors will be $1.08\mathrm{\mu m}$.
+As explained in section \ref{sec:switch_dimensions}, $W/L$ should be as small as possible to reduce leakage current. Therefore the length and width of the switch transistors will be $1.08\mathrm{\mu m}$.
 
-CS was tuned to $2 \mathrm{pF}$. The output from simulations with this value for the exposure-light corners min-min, min-max, max-min and max-max are shown respectively in figures \ref{fig:min-min}, \ref{fig:min-max}, \ref{fig:max-min} and \ref{fig:max-max}.
+CS was tuned to $2 \mathrm{pF}$. The output from simulations with this value for the exposure-light corners min-min, min-max, max-min and max-max are shown respectively in figures \ref{fig:min-min}, \ref{fig:min-max}, \ref{fig:max-min} and \ref{fig:max-max}. These simulations were done by transient analysis of the voltage over $C_S$ while applying photodiode current and exposure time for the corner cases. The resulting voltage over $C_S$ is the value at the end of the exposure time.
 
 \begin{figure}
     \centering
@@ -46,6 +71,8 @@ CS was tuned to $2 \mathrm{pF}$. The output from simulations with this value for
     \caption{Maximum exposure time - maximum light}
     \label{fig:max-max}
 \end{figure}
+
+For M3 and the active load the dynamic range was largest when $W/L$ for M3 was as large as possible and $W/L$ for MC1 and MC2 as small as possible. The simulation used for this is as follows: Simulate a transient analysis on the netlist for the full analog circuit, set \emph{NRE\_1} \verb|LOW| and \emph{NRE\_2} \verb|HIGH|. \emph{ERASE} should first be \verb|HIGH| a little while, then when it gets \verb|LOW|, \emph{EXPOSE} goes \verb|HIGH|, and it should be \verb|HIGH| long enough for the voltage on the OUT wires to reach its maximum value. The dynamic range is then the difference between the maximum and minimum of this curve.
 
 \subsubsection{Analog circuit simulation}
 
