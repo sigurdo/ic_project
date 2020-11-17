@@ -74,16 +74,29 @@ Results from full analog circuit simulation in FF and SS corners are shown in fi
 \subsection{Digital circuit}
 
 % refer to code in appendix
-% module interface
-% explain what state 0, 1 and 2 is
+The Verilog code for the digital camera controller is included in appendix \ref{sec:verilog}, and the module interface is shown in figure \ref{fig:digitalModule}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/camera_controller_pinout_with_internal.png}
+    \caption{Overview of input and output pins as well as internal registers for the camera controller module.}
+    \label{fig:digitalModule}
+\end{figure}
+
+\emph{exp\_time} is a 5-bit internal register that holds the exposure time in milliseconds. The exposure time is 16ms by default, which is the middle value between the minimum 2ms and the maximum 30ms. \emph{exp\_time} is only adjusted if \emph{exp\_increase}, \emph{exp\_decrease} or \emph{rst} is \verb|HIGH|. This means that after a picture is taken, the exposure time is not reset, allowing the user to take multiple pictures in the same lighting without having to tune the exposure time back after each picture. If the user presses the reset button in any of the three states, \emph{exp\_time} will return to its default value of $16$.
+
+\emph{cnt} is, like \emph{exp\_time}, an internal, 5-bit register. When the camera state switches to \emph{exposure} or \emph{readout}, \emph{cnt} is set to the duration of the state in clock cycles minus one. For every clock cycle in the state thereafter, \emph{cnt} will decrement. After \emph{cnt} has reached $0$, the state will switch to the next one. The clock frequency is specified as 1kHz in this camera, meaning that one clock cycle lasts for 1ms. The state's duration in clock cycles thus equals its duration in milliseconds. This means that \emph{cnt} will be set to $exp\_time - 1$ when the state switches to \emph{exposure}, and $8$ when the state switches to \emph{readout}.
+
+\emph{state} is a 2-bit internal register that holds the state the camera will be in the next clock cycle, respresented by an integer. $0$ represents the \emph{idle} state, $1$ respresents \emph{exposure}, and $2$ represents \emph{readout}. It is important to note that whenever \emph{state} is set to $0$, \emph{ERASE} is set to \verb|HIGH| at the same time, i.e. at the rising edge of the same clock cycle. The camera will therefore not operate as being in the \emph{idle} state and allowing a new picture to be taken before the next rising edge of the clock. This ensures that \emph{ERASE} always is \verb|HIGH| for at least one clock cycle after a picture is taken or cancelled underway, as described in section \ref{sec:fsm}.
 
 \subsubsection{Digital circuit simulation}
 
-A grand showcase of the properties of the implemented camera controller is shown in figure \ref{fig:waveform}. The first five signals in the list to the left are the input signals, the following five are the output signals, and the last three are the internal registers.
+A showcase of the properties of the implemented camera controller is shown in figure \ref{fig:waveform}. The first five signals in the list to the left are the input signals, the following five are the output signals, and the last three are the internal registers.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{graphs/digital_waveform.png}
+    \caption{A waveform for the digital camera controller showcasing its properties.}
     \label{fig:waveform}
 \end{figure}
 
