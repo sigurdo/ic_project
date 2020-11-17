@@ -5,10 +5,10 @@ Built-in symbols=0
 FileTimeLow=30848868
 Status=Compiled
 [COMPILESTATUS|.\src\camera_controller.v]
-FileTimeLow=30848864
+FileTimeLow=30849475
 Status=Compiled
 [COMPILESTATUS|.\..\..\..\..\..\..\..\OneDrive-NTNU\elsys\semester5\ic\ic_project\verilog\camera_controller\src\waveform1.awc]
-FileTimeLow=30847470
+FileTimeLow=30850270
 Status=Modified
 [COMPILESTATUS|.\..\..\..\..\..\..\..\OneDrive-NTNU\elsys\semester5\ic\ic_project\verilog\camera_controller\src\waveform2.awc]
 FileTimeLow=30847471

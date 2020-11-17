@@ -4,3 +4,6 @@ report/*.fdb_latexmk
 report/*.fls
 report/*.log
 report/*.synctex.gz
+
+local_aimspiceshit/*.log
+local_aimspiceshit/*.out
