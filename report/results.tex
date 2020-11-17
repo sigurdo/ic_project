@@ -76,12 +76,12 @@ For M3 and the active load the dynamic range was largest when $W/L$ for M3 was a
 
 \subsubsection{Analog circuit simulation}
 
-The simulation of the full analog circuit is shown in figure \ref{fig:analogWaveform}. In this simulation the exposure time was $5 \mathrm{ms}$ and the pixels were exposed by photodiode currents of $50 \mathrm{pA}$, $100 \mathrm{pA}$, $300 \mathrm{pA}$ and $750 \mathrm{pA}$.
+The simulation of the full analog circuit is shown in figure \ref{fig:analogWaveform}. In this simulation the exposure time was $5 \mathrm{ms}$ and the pixels 11, 12, 21 and 22 were exposed by photodiode currents of $750 \mathrm{pA}$, $50 \mathrm{pA}$, $300 \mathrm{pA}$ and $100 \mathrm{pA}$ respectively.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{graphs/analogWaveform.png}
-    \caption{Simulation of analog circuit.}
+    \caption{Simulation of analog circuit. The color(node nr)'s are: red(2): EXPOSE, light green(3): ERASE, blue(4): NRE\_1, magenta(5): NRE\_2, light blue(6): OUT1, brown(7): OUT2, dark green(8): $V_{C11}$, mustard(9): $V_{C12}$, dark blue(10): $V_{C21}$, teal(11): $V_{C22}$.}
     \label{fig:analogWaveform}
 \end{figure}
 
@@ -130,14 +130,14 @@ Results from full analog circuit simulation in FF and SS corners are shown in fi
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{graphs/analogWaveform_ff.png}
-    \caption{FF corner simulation of full analog circuit.}
+    \caption{FF corner simulation of full analog circuit. Colors are the same as in figure \ref{fig:analogWaveform}.}
     \label{fig:ffFull}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{graphs/analogWaveform_ss.png}
-    \caption{SS corner simulation of full analog circuit.}
+    \caption{SS corner simulation of full analog circuit. Colors are the same as in figure \ref{fig:analogWaveform}.}
     \label{fig:ssFull}
 \end{figure}
 
