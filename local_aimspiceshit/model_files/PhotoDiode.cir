@@ -1,6 +1,6 @@
 * Photodiode circuit
 
-.param Ipd_1 = 750p
+.param Ipd_1 = 150p
 
 .subckt PhotoDiode  VDD N1_R1C1 
 I1_R1C1  VDD   N1_R1C1   DC  Ipd_1            ! Photo current source

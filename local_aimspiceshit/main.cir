@@ -1,9 +1,9 @@
 [aimspice]
 [description]
-1519
+2047
 * Pixel subcircuit
 
-.include model_files/p18_cmos_models_tt.inc
+.include model_files/p18_cmos_models_ss.inc
 .include model_files/PhotoDiode.cir
 
 .param minW 1.08u
@@ -27,7 +27,8 @@
 .param CS_value 2p
 
 .subckt pixel VDD VSS EXPOSE ERASE NRE OUT N2
-xPhotoDiode VDD 1 PhotoDiode
+.param I_D 150p
+xPhotoDiode VDD 1 PhotoDiode Ipd_1 = I_D
 * How to make NMOS: MX drain gate source bulk NMOS W= L=
 M1 1 EXPOSE N2 VSS NMOS W=M1W L=M1L
 M2 N2 ERASE VSS VSS NMOS W=M2W L=M2L
@@ -45,29 +46,35 @@ MC VDD OUT OUT VDD PMOS W=MCW L=MCL
 CC OUT VSS CC_value
 .ends
 
-xPixel11 1 0 2 3 4 6  8 pixel
-xPixel12 1 0 2 3 4 7  9 pixel
-xPixel21 1 0 2 3 5 6 10 pixel
-xPixel22 1 0 2 3 5 7 11 pixel
+* How to make pixel:
+* xName     VDD  VSS  EXPOSE  ERASE  NRE  OUT   N2   pixel  I_D=
+  xPixel11    1    0       2      3    4    6   8    pixel  I_D=750p
+  xPixel12    1    0       2      3    4    7   9    pixel  I_D=50p
+  xPixel21    1    0       2      3    5    6  10    pixel  I_D=300p
+  xPixel22    1    0       2      3    5    7  11    pixel  I_D=100p
 
 xLoad1 1 0 6 load
 xLoad2 1 0 7 load
 
 VDD 1 0 dc 1.8v
-* How to make pulse: Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)
+* How to make pulse:
 * V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
-vEXPOSE 2 0 pulse(0v 1.8v 1m 30u 30u 30m 40m)
-vERASE  3 0 pulse(0v 1.8V 0m 30u 30u 1m 40m)
+* Vname   N1   N2   pulse(   V1     V2    TD   Tr   Tf    PW  Period)
+  vERASE   3    0   pulse(   0v   1.8V    0m   1u   1u    1m     15m)
+  vEXPOSE  2    0   pulse(   0v   1.8v    1m   1u   1u    5m     15m)
+  vNRE1    4    0   pulse( 1.8v     0v    7m   1u   1u    3m     15m)
+  vNRE2    5    0   pulse( 1.8v     0v   11m   1u   1u    3m     15m)
 
-vNRE1 4 0 dc 1.8v
-vNRE2 5 0 dc 0v
+* vNRE1 4 0 dc 1.8v
+* vNRE2 5 0 dc 0v
 
 * How to make transient analysis: .TRAN TSTEP TSTOP
-.plot TRAN V(6) V(7) V(2) V(3)
+.plot TRAN V(2) V(3) V(4) V(5) V(6) V(7) V(8) V(9) V(10) V(11)
+
 
 [tran]
 100n
-40m
+15m
 X
 X
 0

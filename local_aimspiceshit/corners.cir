@@ -1,0 +1,31 @@
+[aimspice]
+[description]
+352
+* Corner simulations for camera
+
+.include model_files/p18_cmos_models_ss.inc
+
+.param minW 1.08u
+.param maxW 5.04u
+.param maxL 1.08u
+.param minL 0.36u
+
+* How to make NMOS:
+* MX drain gate source bulk NMOS W=     L=
+  M1     1    2      0    0 NMOS W=minW L=maxL
+
+* VX + - DC(value)
+  V1 1 0 DC( 1.8v)
+  V2 2 0 DC(   0v)
+
+.plot rds(M1)
+
+[dc]
+1
+V2
+0
+1.8
+0.001
+[ana]
+1 0
+[end]
