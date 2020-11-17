@@ -72,7 +72,9 @@ Values for M3 and active load should be tuned for maximum dynamic range, but it 
 
 \subsubsection{Process variations}
 
-It is important to look at how process variations will impact an analog design. One way to do this is to look at the what is called FF, FS, SF and SS corners. F means fast, S means slow, the first letter is for NMOS and the second is for PMOS. The values to measure in each corner are the off resistance and on resistance, and they must not vary too much.
+It is important to look at how process variations will impact an analog design. One way to do this is to look at the what is called FF, FS, SF and SS corners. F means fast, S means slow, the first letter is for NMOS and the second is for PMOS. For this design it is enough to look at how the switch transistors are affect by process variations. The values to measure in each corner is $R_{DS}$ when switched off and on.
+
+For curiosity we will also have a look at how these two corners affect the analog circuit as a whole.
 
 \subsection{Digital camera controller}
 The digital input signals in the analog circuit need to be controlled by a digital circuit - the digital camera controller.

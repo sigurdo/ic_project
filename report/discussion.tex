@@ -1,1 +1,9 @@
 \section{Discussion}
+\subsection{Analog}
+\subsubsection{Process variation}
+
+The values for $R_{DS}$ for a switch transistor turned off is $5 \mathrm{G\Omega}$ in FF, $500 \mathrm{G\Omega}$ in TT and $50 \mathrm{T\Omega}$. For a voltage of $1\mathrm{V}$ this means a leakage of $200\mathrm{pA}$ in FF, and that is actually quite dramatic in our circuit. In SS however, a voltage of $1\mathrm{V}$ means a leakage current of $20\mathrm{fA}$, and that is actually better for our circuit than the TT case.
+
+The $R_{DS}$ values when the transistors are switched on, however are not varying that much. The $R_{DS}$ values for FF, TT and SS respectively are $500 \mathrm{k\Omega}$, $750 \mathrm{k\Omega}$ and $1 \mathrm{M\Omega}$. To conduct a current of $1\mathrm{nA}$, the required voltages are respectively $500 \mathrm{\mu V}$, $750 \mathrm{\mu V}$ and $1 \mathrm{mV}$. All these values are very small compared to $V_{DD}$, so when switched on, our transistors can be considered ideal conductors for practical purposes.
+
+For the full analog circuit, we can see as expected that the way in which the FF corner increases leakage current has a dramatic impact on the system as a whole, while the way SS increases the on resistance does not make a big change. And the cool thing is that SS also reduces leakage current compared to TT, so that SS in total improves behaviour of our design.
