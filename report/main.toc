@@ -1,20 +1,20 @@
 \contentsline {section}{\numberline {1}Introduction}{4}%
 \contentsline {section}{\numberline {2}Theory}{4}%
 \contentsline {subsection}{\numberline {2.1}Analog circuit}{4}%
-\contentsline {subsubsection}{\numberline {2.1.1}Conceptual operation of pixel circuit}{6}%
-\contentsline {subsubsection}{\numberline {2.1.2}Dimensions for switch transistors}{7}%
+\contentsline {subsubsection}{\numberline {2.1.1}Conceptual operation of pixel circuit}{4}%
+\contentsline {subsubsection}{\numberline {2.1.2}Dimensions for switch transistors}{6}%
 \contentsline {subsubsection}{\numberline {2.1.3}Value for $C_s$}{7}%
-\contentsline {subsubsection}{\numberline {2.1.4}Values for M3 and active load}{8}%
+\contentsline {subsubsection}{\numberline {2.1.4}Values for M3 and active load}{7}%
 \contentsline {subsubsection}{\numberline {2.1.5}Process variations}{8}%
-\contentsline {subsection}{\numberline {2.2}Digital camera controller}{9}%
+\contentsline {subsection}{\numberline {2.2}Digital camera controller}{8}%
 \contentsline {subsubsection}{\numberline {2.2.1}Finite state machine}{9}%
-\contentsline {subsubsection}{\numberline {2.2.2}Output timing}{11}%
-\contentsline {section}{\numberline {3}Results}{12}%
-\contentsline {subsection}{\numberline {3.1}Analog pixel circuit}{12}%
-\contentsline {subsubsection}{\numberline {3.1.1}Values and dimensions}{12}%
-\contentsline {subsubsection}{\numberline {3.1.2}Analog circuit simulation}{14}%
-\contentsline {subsubsection}{\numberline {3.1.3}Process variation simulations}{14}%
-\contentsline {subsection}{\numberline {3.2}Digital circuit}{17}%
+\contentsline {subsubsection}{\numberline {2.2.2}Output timing}{10}%
+\contentsline {section}{\numberline {3}Results}{11}%
+\contentsline {subsection}{\numberline {3.1}Analog pixel circuit}{11}%
+\contentsline {subsubsection}{\numberline {3.1.1}Values and dimensions}{11}%
+\contentsline {subsubsection}{\numberline {3.1.2}Analog circuit simulation}{13}%
+\contentsline {subsubsection}{\numberline {3.1.3}Process variation simulations}{13}%
+\contentsline {subsection}{\numberline {3.2}Digital circuit}{16}%
 \contentsline {subsubsection}{\numberline {3.2.1}Digital circuit simulation}{17}%
 \contentsline {section}{\numberline {4}Discussion}{18}%
 \contentsline {subsection}{\numberline {4.1}Analog}{18}%
