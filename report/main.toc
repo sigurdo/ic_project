@@ -19,7 +19,8 @@
 \contentsline {section}{\numberline {4}Discussion}{14}%
 \contentsline {subsection}{\numberline {4.1}Analog}{14}%
 \contentsline {subsubsection}{\numberline {4.1.1}Process variation}{14}%
-\contentsline {section}{Appendices}{15}%
-\contentsline {subsection}{A Analog simulation graphs}{15}%
-\contentsline {subsection}{B Spice code}{19}%
-\contentsline {subsection}{C Verilog code}{20}%
+\contentsline {section}{\numberline {5}Summary}{15}%
+\contentsline {section}{Appendices}{16}%
+\contentsline {subsection}{A Analog simulation graphs}{16}%
+\contentsline {subsection}{B Spice code}{20}%
+\contentsline {subsection}{C Verilog code}{27}%

@@ -22,7 +22,8 @@
 //{{ Section below this comment is automatically maintained
 //   and may be overwritten
 //{module {camera_controller}}
-module camera_controller ( init ,exp_increase ,exp_decrease ,clk ,rst ,NRE_1 ,NRE_2 ,ADC ,expose ,erase );
+module camera_controller ( init ,exp_increase ,exp_decrease ,
+    clk ,rst ,NRE_1 ,NRE_2 ,ADC ,expose ,erase );
 
 //}} End of automatically maintained section
 

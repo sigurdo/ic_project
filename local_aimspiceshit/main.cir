@@ -1,6 +1,6 @@
 [aimspice]
 [description]
-2047
+2050
 * Pixel subcircuit
 
 .include model_files/p18_cmos_models_ss.inc
@@ -58,7 +58,8 @@ xLoad2 1 0 7 load
 
 VDD 1 0 dc 1.8v
 * How to make pulse:
-* V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
+* V1 - initial voltage; V2 - peak voltage; TD - initial delay time;
+* Tr - rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
 * Vname   N1   N2   pulse(   V1     V2    TD   Tr   Tf    PW  Period)
   vERASE   3    0   pulse(   0v   1.8V    0m   1u   1u    1m     15m)
   vEXPOSE  2    0   pulse(   0v   1.8v    1m   1u   1u    5m     15m)

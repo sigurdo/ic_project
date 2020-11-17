@@ -40,7 +40,8 @@ wire ADC;
 wire expose;
 wire erase;
 
-camera_controller camera_controller1(init, exp_increase, exp_decrease, clk, rst, NRE_1, NRE_2, ADC, expose, erase);
+camera_controller camera_controller1(init, exp_increase, exp_decrease,
+    clk, rst, NRE_1, NRE_2, ADC, expose, erase);
 
 initial begin
     clk = 0;
