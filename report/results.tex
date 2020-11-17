@@ -42,48 +42,13 @@ and limits the length to
 
 As explained in section \ref{sec:switch_dimensions}, $W/L$ should be as small as possible to reduce leakage current. Therefore the length and width of the switch transistors will be $1.08\mathrm{\mu m}$.
 
-CS was tuned to $2 \mathrm{pF}$. The output from simulations with this value for the exposure-light corners min-min, min-max, max-min and max-max are shown respectively in figures \ref{fig:min-min}, \ref{fig:min-max}, \ref{fig:max-min} and \ref{fig:max-max}. These simulations were done by transient analysis of the voltage over $C_S$ while applying photodiode current and exposure time for the corner cases. The resulting voltage over $C_S$ is the value at the end of the exposure time.
+CS was tuned to $2 \mathrm{pF}$. The output from simulations with this value for the exposure-light corners min-min, min-max, max-min and max-max are shown respectively in figures \ref{fig:min-min}, \ref{fig:min-max}, \ref{fig:max-min} and \ref{fig:max-max} in appendix A. These simulations were done by transient analysis of the voltage over $C_S$ while applying photodiode current and exposure time for the corner cases. The resulting voltage over $C_S$ is the value at the end of the exposure time.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/minExp_minLight.png}
-    \caption{Minimum exposure time - minimum light}
-    \label{fig:min-min}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/minExp_maxLight.png}
-    \caption{Minimum exposure time - maximum light}
-    \label{fig:min-max}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/maxExp_minLight.png}
-    \caption{Maximum exposure time - minimum light}
-    \label{fig:max-min}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/maxExp_maxLight.png}
-    \caption{Maximum exposure time - maximum light}
-    \label{fig:max-max}
-\end{figure}
-
-For M3 and the active load the dynamic range was largest when $W/L$ for M3 was as large as possible and $W/L$ for MC1 and MC2 as small as possible. The simulation used for this is as follows: Simulate a transient analysis on the netlist for the full analog circuit, set \emph{NRE\_1} \verb|LOW| and \emph{NRE\_2} \verb|HIGH|. \emph{ERASE} should first be \verb|HIGH| a little while, then when it gets \verb|LOW|, \emph{EXPOSE} goes \verb|HIGH|, and it should be \verb|HIGH| long enough for the voltage on the OUT wires to reach its maximum value. The dynamic range is then the difference between the maximum and minimum of this curve.
+For M3 and the active load the dynamic range was largest when $W/L$ for M3 was as large as possible and $W/L$ for MC1 and MC2 as small as possible. The simulation used for this is as follows: Simulate a transient analysis on the netlist for the full analog circuit, set \emph{NRE\_1} \verb|LOW| and \emph{NRE\_2} \verb|HIGH|. \emph{ERASE} should first be \verb|HIGH| a little while, then when it gets \verb|LOW|, \emph{EXPOSE} goes \verb|HIGH|, and it should be \verb|HIGH| long enough for the voltage on the OUT wires to reach its maximum value. The dynamic range is then the difference between the maximum and minimum of this curve. The graph from this simulation with final value is shown in figure \ref{fig:m3AndActiveLoadSim} in appendix A.
 
 \subsubsection{Analog circuit simulation}
 
 The simulation of the full analog circuit is shown in figure \ref{fig:analogWaveform}. In this simulation the exposure time was $5 \mathrm{ms}$ and the pixels 11, 12, 21 and 22 were exposed by photodiode currents of $750 \mathrm{pA}$, $50 \mathrm{pA}$, $300 \mathrm{pA}$ and $100 \mathrm{pA}$ respectively.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/analogWaveform.png}
-    \caption{Simulation of analog circuit. The color(node nr)'s are: red(2): EXPOSE, light green(3): ERASE, blue(4): NRE\_1, magenta(5): NRE\_2, light blue(6): OUT1, brown(7): OUT2, dark green(8): $V_{C11}$, mustard(9): $V_{C12}$, dark blue(10): $V_{C21}$, teal(11): $V_{C22}$.}
-    \label{fig:analogWaveform}
-\end{figure}
 
 \subsubsection{Process variation simulations}
 
@@ -104,42 +69,7 @@ The simulation of the full analog circuit is shown in figure \ref{fig:analogWave
 
 The simulation results for $R_{DS}$ as a function of $V_{GS}$ for a single NMOS are shown in figures \ref{fig:ff}, \ref{fig:tt} and \ref{fig:ss} for FF, TT and SS corners respectively. Table \ref{tab:corners} shows what $R_{DS}$ values this gives when switched fully on and off.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/corner_ff_simulation.png}
-    \caption{FF corner simulation of $R_{DS}$ of NMOS switch as function of $V_{GS}$. $V_{DS} = 1.8\mathrm{V}$.}
-    \label{fig:ff}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/corner_tt_simulation.png}
-    \caption{TT corner simulation of $R_{DS}$ of NMOS switch as function of $V_{GS}$. $V_{DS} = 1.8\mathrm{V}$.}
-    \label{fig:tt}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/corner_ss_simulation.png}
-    \caption{SS corner simulation of $R_{DS}$ of NMOS switch as function of $V_{GS}$. $V_{DS} = 1.8\mathrm{V}$.}
-    \label{fig:ss}
-\end{figure}
-
 Results from full analog circuit simulation in FF and SS corners are shown in figures \ref{fig:ffFull} and \ref{fig:ssFull} respectively.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/analogWaveform_ff.png}
-    \caption{FF corner simulation of full analog circuit. Colors are the same as in figure \ref{fig:analogWaveform}.}
-    \label{fig:ffFull}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{graphs/analogWaveform_ss.png}
-    \caption{SS corner simulation of full analog circuit. Colors are the same as in figure \ref{fig:analogWaveform}.}
-    \label{fig:ssFull}
-\end{figure}
 
 \subsection{Digital circuit}
 
