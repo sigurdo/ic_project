@@ -24,4 +24,4 @@
 \contentsline {section}{Appendices}{17}%
 \contentsline {subsection}{A Analog simulation graphs}{17}%
 \contentsline {subsection}{B Spice code}{21}%
-\contentsline {subsection}{C Verilog code}{28}%
+\contentsline {subsection}{C Verilog code}{31}%
