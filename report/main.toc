@@ -1,26 +1,27 @@
-\contentsline {section}{\numberline {1}Introduction}{4}%
-\contentsline {section}{\numberline {2}Theory}{4}%
-\contentsline {subsection}{\numberline {2.1}Analog circuit}{4}%
-\contentsline {subsubsection}{\numberline {2.1.1}Conceptual operation of pixel circuit}{4}%
-\contentsline {subsubsection}{\numberline {2.1.2}Dimensions for switch transistors}{6}%
-\contentsline {subsubsection}{\numberline {2.1.3}Value for $C_s$}{7}%
-\contentsline {subsubsection}{\numberline {2.1.4}Values for M3 and active load}{7}%
-\contentsline {subsubsection}{\numberline {2.1.5}Process variations}{8}%
-\contentsline {subsection}{\numberline {2.2}Digital camera controller}{8}%
-\contentsline {subsubsection}{\numberline {2.2.1}Finite state machine}{9}%
-\contentsline {subsubsection}{\numberline {2.2.2}Output timing}{10}%
-\contentsline {section}{\numberline {3}Results}{11}%
-\contentsline {subsection}{\numberline {3.1}Analog pixel circuit}{11}%
-\contentsline {subsubsection}{\numberline {3.1.1}Values and dimensions}{11}%
-\contentsline {subsubsection}{\numberline {3.1.2}Analog circuit simulation}{12}%
-\contentsline {subsubsection}{\numberline {3.1.3}Process variation simulations}{12}%
-\contentsline {subsection}{\numberline {3.2}Digital circuit}{12}%
-\contentsline {subsubsection}{\numberline {3.2.1}Digital circuit simulation}{13}%
-\contentsline {section}{\numberline {4}Discussion}{14}%
-\contentsline {subsection}{\numberline {4.1}Process variation}{14}%
-\contentsline {subsection}{\numberline {4.2}Modular digital design}{15}%
-\contentsline {section}{\numberline {5}Summary}{15}%
-\contentsline {section}{Appendices}{16}%
-\contentsline {subsection}{A Analog simulation graphs}{16}%
-\contentsline {subsection}{B Spice code}{20}%
-\contentsline {subsection}{C Verilog code}{27}%
+\contentsline {section}{\numberline {1}Summary}{2}%
+\contentsline {section}{\numberline {2}Introduction}{5}%
+\contentsline {section}{\numberline {3}Theory}{5}%
+\contentsline {subsection}{\numberline {3.1}Analog circuit}{5}%
+\contentsline {subsubsection}{\numberline {3.1.1}Conceptual operation of pixel circuit}{5}%
+\contentsline {subsubsection}{\numberline {3.1.2}Dimensions for switch transistors}{7}%
+\contentsline {subsubsection}{\numberline {3.1.3}Value for $C_s$}{8}%
+\contentsline {subsubsection}{\numberline {3.1.4}Values for M3 and active load}{8}%
+\contentsline {subsubsection}{\numberline {3.1.5}Process variations}{9}%
+\contentsline {subsection}{\numberline {3.2}Digital camera controller}{9}%
+\contentsline {subsubsection}{\numberline {3.2.1}Finite state machine}{10}%
+\contentsline {subsubsection}{\numberline {3.2.2}Output timing}{11}%
+\contentsline {section}{\numberline {4}Results}{12}%
+\contentsline {subsection}{\numberline {4.1}Analog pixel circuit}{12}%
+\contentsline {subsubsection}{\numberline {4.1.1}Values and dimensions}{12}%
+\contentsline {subsubsection}{\numberline {4.1.2}Analog circuit simulation}{13}%
+\contentsline {subsubsection}{\numberline {4.1.3}Process variation simulations}{13}%
+\contentsline {subsection}{\numberline {4.2}Digital circuit}{13}%
+\contentsline {subsubsection}{\numberline {4.2.1}Digital circuit simulation}{14}%
+\contentsline {section}{\numberline {5}Discussion}{15}%
+\contentsline {subsection}{\numberline {5.1}Process variation}{15}%
+\contentsline {subsection}{\numberline {5.2}Modular digital design}{16}%
+\contentsline {section}{\numberline {6}Conclusion}{16}%
+\contentsline {section}{Appendices}{17}%
+\contentsline {subsection}{A Analog simulation graphs}{17}%
+\contentsline {subsection}{B Spice code}{21}%
+\contentsline {subsection}{C Verilog code}{28}%
