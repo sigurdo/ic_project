@@ -21,7 +21,8 @@
 \contentsline {subsection}{\numberline {5.1}Process variation}{15}%
 \contentsline {subsection}{\numberline {5.2}Modular digital design}{16}%
 \contentsline {section}{\numberline {6}Conclusion}{16}%
-\contentsline {section}{Appendices}{17}%
-\contentsline {subsection}{A Analog simulation graphs}{17}%
-\contentsline {subsection}{B Spice code}{21}%
-\contentsline {subsection}{C Verilog code}{31}%
+\contentsline {section}{References}{17}%
+\contentsline {section}{Appendices}{18}%
+\contentsline {subsection}{A Analog simulation graphs}{18}%
+\contentsline {subsection}{B Spice code}{22}%
+\contentsline {subsection}{C Verilog code}{32}%
