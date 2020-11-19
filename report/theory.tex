@@ -30,15 +30,15 @@ Schematics for the pixel circuit is given in figure \ref{fig:pixelCircuit}. It c
 
 This means the voltage $V_{CS}$ is proportional to the total illumination on the pixel throughout the exposure time, which is exactly what we want.
 
-But since the camera is supposed to be reusable, we need a way to erase that charge before taking a new picture. That is what M2 is for. Ideally we want M2 to be a perfect switch, so that when \emph{ERASE} is \verb|HIGH|, $C_S$ is instantly uncharged through M2 and when \emph{ERASE} is \verb|LOW|, M2 does not conduct any current at all.
+Since the camera is supposed to be reusable, we need a way to erase that charge before taking a new picture. That is what M2 is for. Ideally we want M2 to be a perfect switch, so that when \emph{ERASE} is \verb|HIGH|, $C_S$ is instantly discharged through M2 and when \emph{ERASE} is \verb|LOW|, M2 does not conduct any current at all.
 
 For the readout we do not want to connect N2 directly to OUT, since the output wire might be very long and have a big capacitance. Instead, the voltage $V_{CS}$ controls the conductance through a transistor M3. The higher $V_{CS}$, the lower conductance through M3 and higher voltage on OUT. In that way, the current required to control the voltage on the output wire is supplied through the active load in the top of each output wire, outside the pixel circit.
 
-But since all pixels in the same column share the same output wire we need a way to unconnect N3 from OUT, and that is what M4 is for. M4 is supposed to be an ideal switch so that the pixel is driving OUT only when \emph{NRE} is \verb|LOW|.
+Since all pixels in the same column share the same output wire we need a way to disconnect N3 from OUT, and that is what M4 is for. M4 is supposed to be an ideal switch so that the pixel is driving OUT only when \emph{NRE} is \verb|LOW|.
 
 \subsubsection{Dimensions for switch transistors}
 \label{sec:switch_dimensions}
-The transistors M1, M2 and M4 all function as switches, where a digital gate input decides whether the transistor should act as a short-circuit between drain and source, or as an open circuit. Since these transistors simply should have two possible states, it is key that the leakage current is minimized. This is particularly important for M1 and M2 to ensure that the voltage over $C_s$ is as constant as possible during readout. In \emph{Analog Circuit Design} by Tony Chan Carusone, one can that the subthreshold leakage current is given by
+The transistors M1, M2 and M4 all function as switches, where a digital gate input decides whether the transistor should act as a short-circuit between drain and source, or as an open circuit. Since these transistors simply should have two possible states, it is key that the leakage current is minimized. This is particularly important for M1 and M2 to ensure that the voltage over $C_s$ is as constant as possible during readout. In \emph{Analog Circuit Design} by Tony Chan Carusone, one can read that the subthreshold leakage current is given by
 
 \begin{equation}
     \label{eq:leakage}
@@ -57,7 +57,7 @@ To choose a suitable value for $C_s$ spice simulations can be used. To know what
     \item Min-max and max-min corners should make $C_s$ half full charged.
 \end{itemize}
 
-The reason for why we want the corners to be like that is beyond the scope of this report.
+This is to maximize the dynamic range of the output.
 
 \subsubsection{Values for M3 and active load}
 
